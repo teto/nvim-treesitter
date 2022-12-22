@@ -1,4 +1,4 @@
-local MODREV, SPECREV = "scm", "-1"
+local MODREV, SPECREV = "0.8.1", "-1"
 rockspec_format = "3.0"
 package = "nvim-treesitter"
 version = MODREV .. SPECREV
@@ -17,7 +17,6 @@ dependencies = {
 source = {
   url = "http://github.com/nvim-treesitter/nvim-treesitter/archive/v" .. MODREV .. ".zip",
   dir = "."
-
 }
 
 if MODREV == 'scm' then
