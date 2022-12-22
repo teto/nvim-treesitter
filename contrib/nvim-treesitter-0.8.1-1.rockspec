@@ -26,7 +26,7 @@ if MODREV == 'scm' then
 end
 
 build = {
-  type = "builtin",
+  type = "make",
   copy_directories = {
     'autoload',
     'plugin',

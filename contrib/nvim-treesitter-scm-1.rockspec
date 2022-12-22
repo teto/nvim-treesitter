@@ -22,12 +22,13 @@ source = {
 
 if MODREV == 'scm' then
   source = {
-    url = 'git://github.com/nvim-treesitter/nvim-treesitter',
+    url = 'git://github.com/teto/nvim-treesitter',
+    branch = 'release-rockspec-0.8.1',
   }
 end
 
 build = {
-  type = "builtin",
+  type = "make",
   copy_directories = {
     'autoload',
     'plugin',
