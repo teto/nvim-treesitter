@@ -30,6 +30,7 @@ build = {
   copy_directories = {
     'autoload',
     'plugin',
-    'queries'
+    'queries',
+    'lua'
   }
 }

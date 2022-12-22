@@ -29,6 +29,13 @@ end
 
 build = {
   type = "make",
+  install_variables = {
+    INST_PREFIX="$(PREFIX)",
+    INST_BINDIR="$(BINDIR)",
+    INST_LIBDIR="$(LIBDIR)",
+    INST_LUADIR="$(LUADIR)",
+    INST_CONFDIR="$(CONFDIR)",
+  },
   copy_directories = {
     'autoload',
     'plugin',
