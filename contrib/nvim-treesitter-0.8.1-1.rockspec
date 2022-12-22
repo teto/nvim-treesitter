@@ -27,10 +27,10 @@ end
 
 build = {
   type = "make",
-  copy_directories = {
-    'autoload',
-    'plugin',
-    'queries',
-    'lua'
-  }
+  -- copy_directories = {
+  --   'autoload',
+  --   'plugin',
+  --   'queries',
+  --   'lua'
+  -- }
 }
