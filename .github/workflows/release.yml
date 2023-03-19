@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: nvim-neorocks/luarocks-tag-release@fix-treesitter
+      - uses: nvim-neorocks/luarocks-tag-release@easier-prs
         env:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
         with:
@@ -15,5 +15,4 @@ jobs:
           detailed_description: |
             The goal of nvim-treesitter is both to provide a simple and easy way to use the interface for tree-sitter in Neovim
             and to provide some basic functionality such as highlighting based on it.
-          build_type: "make"
           template: nvim-treesitter-luarocks.template
