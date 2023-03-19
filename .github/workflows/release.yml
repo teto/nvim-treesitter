@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: nvim-neorocks/luarocks-tag-release@fix-treesitter
+      - uses: nvim-neorocks/luarocks-tag-release@easier-prs
         env:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
         with:
