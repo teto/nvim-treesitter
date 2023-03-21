@@ -1,5 +1,12 @@
 name: "release"
-on: push
+
+# see https://stackoverflow.com/questions/67501652/github-workflow-event-trigger-synchronize-not-working
+on: 
+  push:
+    tags:
+      - "*"
+  pull_request:
+    types: [ opened, edited, synchronize ]
 jobs:
   luarocks-upload:
     runs-on: ubuntu-latest
