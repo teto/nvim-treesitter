@@ -304,7 +304,47 @@ function M.edit_query_file_user_after(query_group, lang)
   end
 end
 
+---Enables and attaches the module to a buffer for lang.
+---@param mod string path to module
+---@param bufnr integer|nil buffer number, defaults to current buffer
+---@param lang string|nil language, defaults to current language
+local function buffer_info(bufnr, lang)
+  -- local module = M.get_module(mod)
+  -- if not module then
+  --   return
+  -- end
+
+  bufnr = bufnr or api.nvim_get_current_buf()
+  lang = lang or parsers.get_buf_lang(bufnr)
+
+  local parser = vim.treesitter.get_parser()
+  -- 
+  if parser then
+    print("Parser available for language", lang)
+  else
+    print("No parser for language", lang)
+  end
+
+  -- if not module.enable then
+  --   if module.enabled_buffers then
+      -- module.enabled_buffers[bufnr] = true
+    -- else
+    --   module.enabled_buffers = { [bufnr] = true }
+    -- end
+  -- end
+
+  -- M.attach_module(mod, bufnr, lang)
+end
+
 M.commands = {
+  -- like LspInfo but for current buffer
+  TSBufInfo = {
+    run = buffer_info,
+    args = {
+      "-nargs=0",
+      -- "-complete=custom,nvim_treesitter#available_modules",
+    },
+  },
   TSBufEnable = {
     run = enable_module,
     args = {
