@@ -3,5 +3,5 @@ build:
 	echo "Do nothing"
 
 install:
-	mkdir -p $(INST_LUADIR)
-	cp -r autoload plugin queries lua $(INST_LUADIR)
+	mkdir -p $(INST_LUADIR)/nvim-treesitter
+	cp -r autoload plugin queries lua $(INST_LUADIR)/nvim-treesitter
